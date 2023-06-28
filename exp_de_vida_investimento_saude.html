@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="d3faeedd-fa6e-4930-a35b-b8f383150a9e" data-root-id="p1141" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1274">
+      {"e764439d-e368-4ff1-85ad-a16e1dedacc3":{"version":"3.1.1","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"Figure","id":"p1141","attributes":{"width":640,"height":480,"x_range":{"type":"object","name":"DataRange1d","id":"p1143"},"y_range":{"type":"object","name":"DataRange1d","id":"p1142"},"x_scale":{"type":"object","name":"LinearScale","id":"p1154"},"y_scale":{"type":"object","name":"LinearScale","id":"p1156"},"title":{"type":"object","name":"Title","id":"p1148","attributes":{"text":"Mortalidade e Magreza Infantis em 2015 (por pa\u00eds)","text_font":"Arial","text_font_size":"20px","align":"center"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1194","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1004","attributes":{"selected":{"type":"object","name":"Selection","id":"p1005","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1006"},"data":{"type":"map","entries":[["index",{"type":"ndarray","array":{"type":"bytes","data":"AAAAABAAAAAgAAAAMAAAAEAAAABQAAAAYAAAAHAAAACAAAAAkAAAAKAAAACwAAAAwAAAANAAAADgAAAA8AAAAAABAAAQAQAAIAEAADABAABAAQAAUAEAAGABAABwAQAAgAEAAJABAACgAQAAsAEAAMABAADQAQAA4AEAAPABAAAAAgAAEAIAACACAAAwAgAAQAIAAFACAABgAgAAcQIAAIECAACRAgAAoQIAALECAADBAgAA0QIAAOECAADxAgAAAgMAABIDAAAiAwAAMgMAAEIDAABSAwAAYgMAAHIDAACCAwAAkgMAAKIDAACyAwAAwgMAANIDAADiAwAA8gMAAAIEAAASBAAAIgQAADIEAABCBAAAUgQAAGIEAAByBAAAggQAAJIEAACiBAAAsgQAAMIEAADSBAAA4gQAAPIEAAACBQAAEgUAACIFAAAyBQAAQgUAAFIFAABiBQAAcgUAAIIFAACSBQAAogUAALIFAADCBQAA0gUAAOIFAADyBQAAAgYAABIGAAAiBgAAMgYAAEIGAABSBgAAYgYAAHMGAACDBgAAkwYAAKMGAAC0BgAAxAYAANQGAADkBgAA9AYAAAQHAAAVBwAAJQcAADUHAABFBwAAVQcAAGUHAAB2BwAAhgcAAJYHAACnBwAAtwcAAMcHAADXBwAA5wcAAPcHAAAHCAAAFwgAACcIAAA3CAAARwgAAFcIAABnCAAAeAgAAIgIAACYCAAAqQgAALkIAADJCAAA2QgAAOkIAAD5CAAACQkAABkJAAApCQAAOQkAAEkJAABZCQAAaQkAAHkJAACJCQAAmQkAAKkJAAC5CQAAyQkAANkJAADpCQAA+QkAAAkKAAAZCgAAKQoAADkKAABJCgAAWQoAAGkKAAB5CgAAiQoAAJoKAACqCgAAugoAAMoKAADaCgAA6goAAPoKAAAKCwAAGgsAACoLAAA6CwAASgsAAFoLAABqCwAA"},"shape":[183],"dtype":"int32","order":"little"}],["under-five deaths ",{"type":"ndarray","array":{"type":"bytes","data":"UwAAAAAAAAAYAAAAYgAAAAAAAAAJAAAAAQAAAAEAAAAAAAAABgAAAAAAAAAAAAAAcQAAAAAAAAAAAAAAAQAAAAAAAAAnAAAAAAAAAAoAAAAAAAAAAgAAAC8AAAAAAAAAAQAAAD0AAAAfAAAATwAAAAAAAAAMAAAARAAAAAIAAAAVAAAATQAAAAIAAAC3AAAADAAAAAIAAAAKAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAHAAAANAEAAAAAAAABAAAABwAAAAcAAAA8AAAAAgAAAAQAAAAHAAAAAAAAAMIAAAAAAAAAAAAAAAMAAAADAAAABQAAAAEAAAADAAAANAAAAAAAAAAAAAAADAAAACgAAAAGAAAAAQAAABIAAAAEAAAAAAAAAAAAAABMBAAAiAAAABUAAAAmAAAAAAAAAAEAAAACAAAAAQAAAAMAAAAEAAAABQAAAEsAAAAAAAAAAQAAAAMAAAALAAAAAAAAAAEAAAAGAAAACwAAAAIAAAAAAAAAAAAAACYAAAAmAAAABAAAAAAAAABUAAAAAAAAAAwAAAAAAAAAIwAAAAAAAAABAAAAAAAAABQAAABRAAAAMgAAAAMAAAAVAAAAAQAAAAAAAAACAAAAVwAAAOsCAAAAAAAAAQAAALEBAAABAAAADAAAAAMAAAAKAAAAQgAAAAIAAAAAAAAAAAAAAAIAAAABAAAAAgAAAA8AAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAQAAAAAAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAA0AAAAJwAAAAEAAAADAAAAVQAAAAAAAAADAAAAAAAAAAAAAAAIAAAACwAAAAkAAAAAAAAAAgAAABQAAAAAAAAAAAAAAAMAAAASAAAABwAAAF0AAAAFAAAAAQAAAAQAAAB3AAAAGgAAAAAAAAARAAAAAAAAAAoAAAAjAAAALwAAACgAAAAgAAAA"},"shape":[183],"dtype":"int32","order":"little"}],["Polio",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAGEAAAAAAAMBYQAAAAAAAwFdAAAAAAAAAHEAAAAAAAIBVQAAAAAAAQFdAAAAAAAAAWEAAAAAAAEBXQAAAAAAAQFdAAAAAAACAWEAAAAAAAMBXQAAAAAAAgFhAAAAAAABAWEAAAAAAAEBYQAAAAAAAwFhAAAAAAADAWEAAAAAAAIBXQAAAAAAAgFNAAAAAAACAWEAAAAAAAMBYQAAAAAAAgFJAAAAAAAAAWEAAAAAAAIBYQAAAAAAAwFhAAAAAAADAVkAAAAAAAMBWQAAAAAAAgFdAAAAAAABAVEAAAAAAAEBXQAAAAAAAwFVAAAAAAADAVEAAAAAAAMBWQAAAAAAAgEdAAAAAAAAASkAAAAAAAABYQAAAAAAAwFhAAAAAAADAVkAAAAAAAABXQAAAAAAAACBAAAAAAAAAV0AAAAAAAIBXQAAAAAAAwFhAAAAAAABAWEAAAAAAAEBYQAAAAAAAwFhAAAAAAACAU0AAAAAAAEBXQAAAAAAAAFVAAAAAAADAVUAAAAAAAABVQAAAAAAAQFdAAAAAAAAAV0AAAAAAAAAxQAAAAAAAwFdAAAAAAABAV0AAAAAAAMBSQAAAAAAAwFhAAAAAAABAWEAAAAAAAIBYQAAAAAAAwFNAAAAAAAAAWEAAAAAAAMBWQAAAAAAAgFdAAAAAAAAAVkAAAAAAAMBYQAAAAAAAwFhAAAAAAAAAIkAAAAAAAABFQAAAAAAAwFVAAAAAAAAAV0AAAAAAAABMQAAAAAAAQFhAAAAAAADAWEAAAAAAAABXQAAAAAAAgFVAAAAAAAAAIEAAAAAAAIBYQAAAAAAAgE9AAAAAAADAV0AAAAAAAMBXQAAAAAAAQFdAAAAAAADAVkAAAAAAAMBYQAAAAAAAwFhAAAAAAACAWEAAAAAAAMBUQAAAAAAAACBAAAAAAADAWEAAAAAAAEBYQAAAAAAAQFZAAAAAAADAV0AAAAAAAMBSQAAAAAAAACJAAAAAAAAASkAAAAAAAEBYQAAAAAAAQFdAAAAAAADAWEAAAAAAAMBRQAAAAAAAAFZAAAAAAADAWEAAAAAAAMBYQAAAAAAAgFBAAAAAAABAWEAAAAAAAMBQQAAAAAAAgFhAAAAAAADAVUAAAAAAAMBRQAAAAAAAwFhAAAAAAABAVkAAAAAAAMBYQAAAAAAAACBAAAAAAABAVkAAAAAAAABXQAAAAAAAACJAAAAAAADAV0AAAAAAAABXQAAAAAAAwFhAAAAAAABAUEAAAAAAAIBIQAAAAAAAwFdAAAAAAADAWEAAAAAAAABSQAAAAAAAAFJAAAAAAACAUkAAAAAAAEBWQAAAAAAAAFZAAAAAAADAU0AAAAAAAABXQAAAAAAAgFhAAAAAAADAWEAAAAAAAIBYQAAAAAAAAFZAAAAAAABAVkAAAAAAAEBYQAAAAAAAwFhAAAAAAADAWEAAAAAAAEBYQAAAAAAAgE5AAAAAAAAAWEAAAAAAAEBYQAAAAAAAQFVAAAAAAADAV0AAAAAAAEBYQAAAAAAAgFVAAAAAAAAAWEAAAAAAAABYQAAAAAAAwFdAAAAAAADAWEAAAAAAAIBHQAAAAAAAwFJAAAAAAACAREAAAAAAAEBYQAAAAAAAwFhAAAAAAABAV0AAAAAAAEBWQAAAAAAAAFVAAAAAAACAWEAAAAAAAEBYQAAAAAAAABRAAAAAAAAAWEAAAAAAAMBYQAAAAAAAAFdAAAAAAADAUkAAAAAAAABWQAAAAAAAACBAAAAAAAAAVkAAAAAAAIBYQAAAAAAAQFhAAAAAAADAWEAAAAAAAIBUQAAAAAAAgElAAAAAAADAWEAAAAAAAABYQAAAAAAAAFhAAAAAAABAV0AAAAAAAMBXQAAAAAAAwFhAAAAAAABAUEAAAAAAAMBVQAAAAAAAQFhAAAAAAACAT0AAAAAAAAAiQAAAAAAAAFZA"},"shape":[183],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1195","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1196"}}},"glyph":{"type":"object","name":"Circle","id":"p1191","attributes":{"x":{"type":"field","field":"under-five deaths "},"y":{"type":"field","field":"Polio"},"line_color":{"type":"value","value":"red"},"line_alpha":{"type":"value","value":0.5},"fill_color":{"type":"value","value":"red"},"fill_alpha":{"type":"value","value":0.5},"hatch_color":{"type":"value","value":"red"},"hatch_alpha":{"type":"value","value":0.5}}},"nonselection_glyph":{"type":"object","name":"Circle","id":"p1192","attributes":{"x":{"type":"field","field":"under-five deaths "},"y":{"type":"field","field":"Polio"},"line_color":{"type":"value","value":"red"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"red"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"red"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Circle","id":"p1193","attributes":{"x":{"type":"field","field":"under-five deaths "},"y":{"type":"field","field":"Polio"},"line_color":{"type":"value","value":"red"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"red"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"red"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1147","attributes":{"logo":null,"tools":[{"type":"object","name":"BoxZoomTool","id":"p1172","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1173","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","bottom_units":"canvas","top_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ZoomInTool","id":"p1174"},{"type":"object","name":"PanTool","id":"p1175"},{"type":"object","name":"ResetTool","id":"p1176"},{"type":"object","name":"SaveTool","id":"p1177"},{"type":"object","name":"WheelZoomTool","id":"p1178"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1165","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1166","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1167"},"axis_label":"Magreza extrema entre 5 e 9 anos","axis_label_text_font":"Arial","axis_label_text_font_size":"15px","major_label_orientation":"vertical","major_label_policy":{"type":"object","name":"AllLabels","id":"p1168"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1158","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1159","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1160"},"axis_label":"Mortalidade Infantil","axis_label_text_font":"Arial","axis_label_text_font_size":"15px","major_label_policy":{"type":"object","name":"AllLabels","id":"p1161"}}}],"center":[{"type":"object","name":"Grid","id":"p1164","attributes":{"axis":{"id":"p1158"}}},{"type":"object","name":"Grid","id":"p1171","attributes":{"dimension":1,"axis":{"id":"p1165"}}}],"background_fill_color":"white"}}],"callbacks":{"type":"map"}}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1274').textContent;
+              const render_items = [{"docid":"e764439d-e368-4ff1-85ad-a16e1dedacc3","roots":{"p1141":"d3faeedd-fa6e-4930-a35b-b8f383150a9e"},"root_ids":["p1141"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
