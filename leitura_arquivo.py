@@ -9,3 +9,12 @@ expectativa_escolaridade = df[["Life expectancy ", "Schooling"]]
 
 #transforma os dados de expectativa de vida e escolaridade em um objeto ColumnDataSource
 dados_grafico1 = ColumnDataSource(data=expectativa_escolaridade)
+
+#seleciona as colunas de expectativa de vida e investimento em saúde
+expectativa_investimento = df[["Life expectancy","percentage expenditure"]]
+
+#transforma os dados de expectativa de vida e investimento em saude em um objeto ColumnDataSource
+dados_grafico4 = ColumnDataSource(data=expectativa_investimento)
+
+
+
