@@ -48,10 +48,9 @@ anos = ["2000", "2015"]
 #cria uma tupla de listas com as doencas e os anos, por exemplo, [("Poliomielite", "2000"), ("Poliomielite", "2015"), ...]
 doenca_ano=[(doenca, ano) for doenca in doencas_e_medias_por_ano["doenca"] for ano in anos]
 
-#cria uma lista com as medias dos anos 2000 e 2015
+#cria uma lista com as medias de vacinaçao dos anos 2000 e 2015
 contagem_medias = sum(zip(doencas_e_medias_por_ano["2000"], doencas_e_medias_por_ano["2015"]), ())
 
-print (contagem_medias)
 #converte os dados em um objeto ColumnDataSource
 dados_grafico3 = ColumnDataSource(data=dict(eixo_x=doenca_ano, medias=contagem_medias))
 
