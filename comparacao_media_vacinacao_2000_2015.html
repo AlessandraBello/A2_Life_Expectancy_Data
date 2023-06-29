@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="ef4095b1-89e5-4cb6-9738-7bbb869bafed" data-root-id="p1096" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1133">
+      {"e19e5685-83af-43c4-86e3-ba205ec2452f":{"version":"3.2.0","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1096","attributes":{"width":640,"height":480,"x_range":{"type":"object","name":"FactorRange","id":"p1095","attributes":{"factors":[["Poliomielite","2000"],["Poliomielite","2015"],["Hepatite B","2000"],["Hepatite B","2015"],["Difteria","2000"],["Difteria","2015"]]}},"y_range":{"type":"object","name":"DataRange1d","id":"p1098"},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1105"},"y_scale":{"type":"object","name":"LinearScale","id":"p1106"},"title":{"type":"object","name":"Title","id":"p1103","attributes":{"text":"M\u00e9dia de vacina\u00e7\u00e3o nos anos de 2000 e 2015","text_font":"Arial","text_font_size":"20px","align":"center"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1130","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1007","attributes":{"selected":{"type":"object","name":"Selection","id":"p1008","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1009"},"data":{"type":"map","entries":[["eixo_x",[["Poliomielite","2000"],["Poliomielite","2015"],["Hepatite B","2000"],["Hepatite B","2015"],["Difteria","2000"],["Difteria","2015"]]],["medias",[76.27777777777777,83.20765027322405,74.03529411764706,82.42528735632185,73.62777777777778,84.63387978142076]]]}}},"view":{"type":"object","name":"CDSView","id":"p1131","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1132"}}},"glyph":{"type":"object","name":"VBar","id":"p1127","attributes":{"x":{"type":"field","field":"eixo_x"},"width":{"type":"value","value":0.9},"top":{"type":"field","field":"medias"},"line_color":{"type":"value","value":"blue"},"fill_color":{"type":"value","value":"blue"},"hatch_color":{"type":"value","value":"blue"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1128","attributes":{"x":{"type":"field","field":"eixo_x"},"width":{"type":"value","value":0.9},"top":{"type":"field","field":"medias"},"line_color":{"type":"value","value":"blue"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"blue"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"blue"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1129","attributes":{"x":{"type":"field","field":"eixo_x"},"width":{"type":"value","value":0.9},"top":{"type":"field","field":"medias"},"line_color":{"type":"value","value":"blue"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"blue"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"blue"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1104","attributes":{"logo":null,"tools":[{"type":"object","name":"BoxZoomTool","id":"p1117","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1118","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","bottom_units":"canvas","top_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ZoomInTool","id":"p1119","attributes":{"renderers":"auto"}},{"type":"object","name":"PanTool","id":"p1120"},{"type":"object","name":"ResetTool","id":"p1121"},{"type":"object","name":"SaveTool","id":"p1122"},{"type":"object","name":"WheelZoomTool","id":"p1123"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1112","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1113","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1114"},"axis_label":"M\u00e9dia de vacina\u00e7\u00e3o (em %)","axis_label_text_font":"Arial","axis_label_text_font_size":"15px","major_label_orientation":"vertical","major_label_policy":{"type":"object","name":"AllLabels","id":"p1115"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1107","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1108"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1109"},"axis_label":"Doen\u00e7as","axis_label_text_font":"Arial","axis_label_text_font_size":"15px","major_label_policy":{"type":"object","name":"AllLabels","id":"p1110"}}}],"center":[{"type":"object","name":"Grid","id":"p1111","attributes":{"axis":{"id":"p1107"}}},{"type":"object","name":"Grid","id":"p1116","attributes":{"dimension":1,"axis":{"id":"p1112"}}}],"background_fill_color":"white"}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1133').textContent;
+              const render_items = [{"docid":"e19e5685-83af-43c4-86e3-ba205ec2452f","roots":{"p1096":"ef4095b1-89e5-4cb6-9738-7bbb869bafed"},"root_ids":["p1096"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
