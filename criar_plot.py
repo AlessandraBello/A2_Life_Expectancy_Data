@@ -1,8 +1,7 @@
 from bokeh.plotting import figure
-from bokeh.io import output_file, show
 
-def grafico_de_dispercao (nome_arquivo_final, dados_x, dados_y, banco_de_dados, cor_glifo, transparencia_glifo, cor_fundo, titulo_grafico, titulo_eixo_x, titulo_eixo_y):
-    output_file(nome_arquivo_final)
+def grafico_de_dispercao (dados_x, dados_y, banco_de_dados, cor_glifo, transparencia_glifo, cor_fundo, titulo_grafico, 
+                          titulo_eixo_x, titulo_eixo_y):
     grafico = figure(tools = "box_zoom, zoom_in, pan, reset, save, wheel_zoom")
     grafico.toolbar.logo = None
     grafico.circle(x=dados_x, y=dados_y, source = banco_de_dados, color = cor_glifo, alpha = transparencia_glifo)
@@ -21,11 +20,9 @@ def grafico_de_dispercao (nome_arquivo_final, dados_x, dados_y, banco_de_dados, 
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
 
-    return show(grafico)
+    return grafico
 
-
-def grafico_de_linha(nome_arquivo_final, eixo_x, eixo_y, dados, cor_fundo, título_gráfico, titulo_eixo_x, titulo_eixo_y):
-    output_file(nome_arquivo_final)
+def grafico_de_linha(eixo_x, eixo_y, dados, cor_fundo, título_gráfico, titulo_eixo_x, titulo_eixo_y):
     grafico = figure(tools = "box_zoom, zoom_in, pan, reset, save, wheel_zoom")
     grafico.toolbar.logo = None
     grafico.line(x = eixo_x, y = eixo_y, source = dados)
@@ -44,10 +41,9 @@ def grafico_de_linha(nome_arquivo_final, eixo_x, eixo_y, dados, cor_fundo, títu
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
 
-    return show(grafico)
+    return grafico
 
-def grafico_de_barras(nome_arquivo_final, nomes_eixo_x, dados_x, dados_y, dados, cor_barras, cor_fundo, titulo_grafico, titulo_eixo_x, titulo_eixo_y):
-    output_file(nome_arquivo_final)
+def grafico_de_barras(nomes_eixo_x, dados_x, dados_y, dados, cor_barras, cor_fundo, titulo_grafico, titulo_eixo_x, titulo_eixo_y):
     grafico = figure(x_range = nomes_eixo_x, tools = "box_zoom, zoom_in, pan, reset, save, wheel_zoom")
     grafico.toolbar.logo = None
     grafico.vbar(x = dados_x, top = dados_y, source = dados, width = 0.9, color = cor_barras)
@@ -66,5 +62,4 @@ def grafico_de_barras(nome_arquivo_final, nomes_eixo_x, dados_x, dados_y, dados,
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
 
-    return show(grafico)
-
+    return grafico
