@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="ecb54601-7940-45a5-a73f-625c4b3e579f" data-root-id="p1092" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1132">
+      {"168b3489-2048-4ad2-8365-3e44007aa35d":{"version":"3.2.0","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1092","attributes":{"width":640,"height":480,"x_range":{"type":"object","name":"DataRange1d","id":"p1093"},"y_range":{"type":"object","name":"DataRange1d","id":"p1094"},"x_scale":{"type":"object","name":"LinearScale","id":"p1101"},"y_scale":{"type":"object","name":"LinearScale","id":"p1102"},"title":{"type":"object","name":"Title","id":"p1099","attributes":{"text":"Mortalidade Infantil e Vacina\u00e7\u00e3o contra Polio em 2015","text_font":"Arial","text_font_size":"20px","align":"center"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1126","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1007","attributes":{"selected":{"type":"object","name":"Selection","id":"p1008","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1009"},"data":{"type":"map","entries":[["index",{"type":"ndarray","array":{"type":"bytes","data":"AAAAABAAAAAgAAAAMAAAAEAAAABQAAAAYAAAAHAAAACAAAAAkAAAAKAAAACwAAAAwAAAANAAAADgAAAA8AAAAAABAAAQAQAAIAEAADABAABAAQAAUAEAAGABAABwAQAAgAEAAJABAACgAQAAsAEAAMABAADQAQAA4AEAAPABAAAAAgAAEAIAACACAAAwAgAAQAIAAFACAABgAgAAcQIAAIECAACRAgAAoQIAALECAADBAgAA0QIAAOECAADxAgAAAgMAABIDAAAiAwAAMgMAAEIDAABSAwAAYgMAAHIDAACCAwAAkgMAAKIDAACyAwAAwgMAANIDAADiAwAA8gMAAAIEAAASBAAAIgQAADIEAABCBAAAUgQAAGIEAAByBAAAggQAAJIEAACiBAAAsgQAAMIEAADSBAAA4gQAAPIEAAACBQAAEgUAACIFAAAyBQAAQgUAAFIFAABiBQAAcgUAAIIFAACSBQAAogUAALIFAADCBQAA0gUAAOIFAADyBQAAAgYAABIGAAAiBgAAMgYAAEIGAABSBgAAYgYAAHMGAACDBgAAkwYAAKMGAAC0BgAAxAYAANQGAADkBgAA9AYAAAQHAAAVBwAAJQcAADUHAABFBwAAVQcAAGUHAAB2BwAAhgcAAJYHAACnBwAAtwcAAMcHAADXBwAA5wcAAPcHAAAHCAAAFwgAACcIAAA3CAAARwgAAFcIAABnCAAAeAgAAIgIAACYCAAAqQgAALkIAADJCAAA2QgAAOkIAAD5CAAACQkAABkJAAApCQAAOQkAAEkJAABZCQAAaQkAAHkJAACJCQAAmQkAAKkJAAC5CQAAyQkAANkJAADpCQAA+QkAAAkKAAAZCgAAKQoAADkKAABJCgAAWQoAAGkKAAB5CgAAiQoAAJoKAACqCgAAugoAAMoKAADaCgAA6goAAPoKAAAKCwAAGgsAACoLAAA6CwAASgsAAFoLAABqCwAA"},"shape":[183],"dtype":"int32","order":"little"}],["under-five deaths ",{"type":"ndarray","array":{"type":"bytes","data":"UwAAAAAAAAAYAAAAYgAAAAAAAAAJAAAAAQAAAAEAAAAAAAAABgAAAAAAAAAAAAAAcQAAAAAAAAAAAAAAAQAAAAAAAAAnAAAAAAAAAAoAAAAAAAAAAgAAAC8AAAAAAAAAAQAAAD0AAAAfAAAATwAAAAAAAAAMAAAARAAAAAIAAAAVAAAATQAAAAIAAAC3AAAADAAAAAIAAAAKAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAHAAAANAEAAAAAAAABAAAABwAAAAcAAAA8AAAAAgAAAAQAAAAHAAAAAAAAAMIAAAAAAAAAAAAAAAMAAAADAAAABQAAAAEAAAADAAAANAAAAAAAAAAAAAAADAAAACgAAAAGAAAAAQAAABIAAAAEAAAAAAAAAAAAAABMBAAAiAAAABUAAAAmAAAAAAAAAAEAAAACAAAAAQAAAAMAAAAEAAAABQAAAEsAAAAAAAAAAQAAAAMAAAALAAAAAAAAAAEAAAAGAAAACwAAAAIAAAAAAAAAAAAAACYAAAAmAAAABAAAAAAAAABUAAAAAAAAAAwAAAAAAAAAIwAAAAAAAAABAAAAAAAAABQAAABRAAAAMgAAAAMAAAAVAAAAAQAAAAAAAAACAAAAVwAAAOsCAAAAAAAAAQAAALEBAAABAAAADAAAAAMAAAAKAAAAQgAAAAIAAAAAAAAAAAAAAAIAAAABAAAAAgAAAA8AAAAPAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAQAAAAAAAAAeAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAA0AAAAJwAAAAEAAAADAAAAVQAAAAAAAAADAAAAAAAAAAAAAAAIAAAACwAAAAkAAAAAAAAAAgAAABQAAAAAAAAAAAAAAAMAAAASAAAABwAAAF0AAAAFAAAAAQAAAAQAAAB3AAAAGgAAAAAAAAARAAAAAAAAAAoAAAAjAAAALwAAACgAAAAgAAAA"},"shape":[183],"dtype":"int32","order":"little"}],["Polio",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAGEAAAAAAAMBYQAAAAAAAwFdAAAAAAAAAHEAAAAAAAIBVQAAAAAAAQFdAAAAAAAAAWEAAAAAAAEBXQAAAAAAAQFdAAAAAAACAWEAAAAAAAMBXQAAAAAAAgFhAAAAAAABAWEAAAAAAAEBYQAAAAAAAwFhAAAAAAADAWEAAAAAAAIBXQAAAAAAAgFNAAAAAAACAWEAAAAAAAMBYQAAAAAAAgFJAAAAAAAAAWEAAAAAAAIBYQAAAAAAAwFhAAAAAAADAVkAAAAAAAMBWQAAAAAAAgFdAAAAAAABAVEAAAAAAAEBXQAAAAAAAwFVAAAAAAADAVEAAAAAAAMBWQAAAAAAAgEdAAAAAAAAASkAAAAAAAABYQAAAAAAAwFhAAAAAAADAVkAAAAAAAABXQAAAAAAAACBAAAAAAAAAV0AAAAAAAIBXQAAAAAAAwFhAAAAAAABAWEAAAAAAAEBYQAAAAAAAwFhAAAAAAACAU0AAAAAAAEBXQAAAAAAAAFVAAAAAAADAVUAAAAAAAABVQAAAAAAAQFdAAAAAAAAAV0AAAAAAAAAxQAAAAAAAwFdAAAAAAABAV0AAAAAAAMBSQAAAAAAAwFhAAAAAAABAWEAAAAAAAIBYQAAAAAAAwFNAAAAAAAAAWEAAAAAAAMBWQAAAAAAAgFdAAAAAAAAAVkAAAAAAAMBYQAAAAAAAwFhAAAAAAAAAIkAAAAAAAABFQAAAAAAAwFVAAAAAAAAAV0AAAAAAAABMQAAAAAAAQFhAAAAAAADAWEAAAAAAAABXQAAAAAAAgFVAAAAAAAAAIEAAAAAAAIBYQAAAAAAAgE9AAAAAAADAV0AAAAAAAMBXQAAAAAAAQFdAAAAAAADAVkAAAAAAAMBYQAAAAAAAwFhAAAAAAACAWEAAAAAAAMBUQAAAAAAAACBAAAAAAADAWEAAAAAAAEBYQAAAAAAAQFZAAAAAAADAV0AAAAAAAMBSQAAAAAAAACJAAAAAAAAASkAAAAAAAEBYQAAAAAAAQFdAAAAAAADAWEAAAAAAAMBRQAAAAAAAAFZAAAAAAADAWEAAAAAAAMBYQAAAAAAAgFBAAAAAAABAWEAAAAAAAMBQQAAAAAAAgFhAAAAAAADAVUAAAAAAAMBRQAAAAAAAwFhAAAAAAABAVkAAAAAAAMBYQAAAAAAAACBAAAAAAABAVkAAAAAAAABXQAAAAAAAACJAAAAAAADAV0AAAAAAAABXQAAAAAAAwFhAAAAAAABAUEAAAAAAAIBIQAAAAAAAwFdAAAAAAADAWEAAAAAAAABSQAAAAAAAAFJAAAAAAACAUkAAAAAAAEBWQAAAAAAAAFZAAAAAAADAU0AAAAAAAABXQAAAAAAAgFhAAAAAAADAWEAAAAAAAIBYQAAAAAAAAFZAAAAAAABAVkAAAAAAAEBYQAAAAAAAwFhAAAAAAADAWEAAAAAAAEBYQAAAAAAAgE5AAAAAAAAAWEAAAAAAAEBYQAAAAAAAQFVAAAAAAADAV0AAAAAAAEBYQAAAAAAAgFVAAAAAAAAAWEAAAAAAAABYQAAAAAAAwFdAAAAAAADAWEAAAAAAAIBHQAAAAAAAwFJAAAAAAACAREAAAAAAAEBYQAAAAAAAwFhAAAAAAABAV0AAAAAAAEBWQAAAAAAAAFVAAAAAAACAWEAAAAAAAEBYQAAAAAAAABRAAAAAAAAAWEAAAAAAAMBYQAAAAAAAAFdAAAAAAADAUkAAAAAAAABWQAAAAAAAACBAAAAAAAAAVkAAAAAAAIBYQAAAAAAAQFhAAAAAAADAWEAAAAAAAIBUQAAAAAAAgElAAAAAAADAWEAAAAAAAABYQAAAAAAAAFhAAAAAAABAV0AAAAAAAMBXQAAAAAAAwFhAAAAAAABAUEAAAAAAAMBVQAAAAAAAQFhAAAAAAACAT0AAAAAAAAAiQAAAAAAAAFZA"},"shape":[183],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1127","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1128"}}},"glyph":{"type":"object","name":"Circle","id":"p1123","attributes":{"x":{"type":"field","field":"under-five deaths "},"y":{"type":"field","field":"Polio"},"line_color":{"type":"value","value":"red"},"line_alpha":{"type":"value","value":0.5},"fill_color":{"type":"value","value":"red"},"fill_alpha":{"type":"value","value":0.5},"hatch_color":{"type":"value","value":"red"},"hatch_alpha":{"type":"value","value":0.5}}},"nonselection_glyph":{"type":"object","name":"Circle","id":"p1124","attributes":{"x":{"type":"field","field":"under-five deaths "},"y":{"type":"field","field":"Polio"},"line_color":{"type":"value","value":"red"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"red"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"red"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Circle","id":"p1125","attributes":{"x":{"type":"field","field":"under-five deaths "},"y":{"type":"field","field":"Polio"},"line_color":{"type":"value","value":"red"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"red"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"red"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1100","attributes":{"logo":null,"tools":[{"type":"object","name":"BoxZoomTool","id":"p1113","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1114","attributes":{"syncable":false,"level":"overlay","visible":false,"left_units":"canvas","right_units":"canvas","bottom_units":"canvas","top_units":"canvas","line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5}}}},{"type":"object","name":"ZoomInTool","id":"p1115","attributes":{"renderers":"auto"}},{"type":"object","name":"PanTool","id":"p1116"},{"type":"object","name":"ResetTool","id":"p1117"},{"type":"object","name":"SaveTool","id":"p1118"},{"type":"object","name":"WheelZoomTool","id":"p1119"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1108","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1109","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1110"},"axis_label":"Vacina\u00e7\u00e3o contra poliomelite (em %)","axis_label_text_font":"Arial","axis_label_text_font_size":"15px","major_label_orientation":"vertical","major_label_policy":{"type":"object","name":"AllLabels","id":"p1111"}}}],"below":[{"type":"object","name":"LinearAxis","id":"p1103","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1104","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1105"},"axis_label":"Mortalidade Infantil","axis_label_text_font":"Arial","axis_label_text_font_size":"15px","major_label_policy":{"type":"object","name":"AllLabels","id":"p1106"}}}],"center":[{"type":"object","name":"Grid","id":"p1107","attributes":{"axis":{"id":"p1103"}}},{"type":"object","name":"Grid","id":"p1112","attributes":{"dimension":1,"axis":{"id":"p1108"}}}],"background_fill_color":"white"}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1132').textContent;
+              const render_items = [{"docid":"168b3489-2048-4ad2-8365-3e44007aa35d","roots":{"p1092":"ecb54601-7940-45a5-a73f-625c4b3e579f"},"root_ids":["p1092"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
