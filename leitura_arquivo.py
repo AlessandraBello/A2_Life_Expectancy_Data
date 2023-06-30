@@ -5,8 +5,10 @@ import numpy as np
 #lê o banco de dados csv e transforma em DataFrame
 df = pd.read_csv("Life Expectancy Data.csv")
 
-#seleciona as colunas de expectativa de vida e escolaridade do ano de 2015
+#seleciona as colunas de expectativa de vida, escolaridade e continente do ano de 2015
 selecao_ano = df[["Life expectancy ", "Schooling", "Continent"]][df["Year"]==2015]
+
+#seleciona as colunas de expectativa de vida e escolaridade por cada continente
 africa = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Africa"]
 america_sul = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="South America"]
 america_norte = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="North America"]
@@ -14,7 +16,7 @@ asia = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]==
 europa = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Europe"]
 oceania = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Oceania"]
 
-#transforma os dados de expectativa de vida e escolaridade em um objeto ColumnDataSource
+#transforma os dados de expectativa de vida e escolaridade em um objeto ColumnDataSource, separado por continente
 dados_grafico1_1 = ColumnDataSource(data=africa)
 dados_grafico1_2 = ColumnDataSource(data=america_sul)
 dados_grafico1_3 = ColumnDataSource(data=america_norte)
