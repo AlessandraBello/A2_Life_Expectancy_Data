@@ -22,3 +22,5 @@ grafico_4 = cp.grafico_de_dispercao("under-five deaths ", "Polio", la.dados_graf
                                     "Vacinação contra poliomelite (em %)")
 
 grafico_7 = gf.grafico7()
+
+grafico_8 = gf.grafico8()
