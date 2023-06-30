@@ -79,7 +79,7 @@ def grafico_51():
     grafico.yaxis.axis_label = "Consumo de álcool puro per capta (em litros)"
     grafico.yaxis.major_label_orientation = "vertical"
 
-    return(show(grafico))
+    return grafico
 
 
 def grafico_52():
@@ -128,7 +128,7 @@ def grafico_52():
     grafico.legend.background_fill_alpha = 0.5
 
     
-    return(show(grafico))
+    return grafico
 
 
 def grafico_53():
@@ -164,7 +164,7 @@ def grafico_53():
     grafico.yaxis.major_label_orientation = "vertical"
 
 
-    return(show(grafico))
+    return grafico
 
 
 def grafico_6():
@@ -201,10 +201,10 @@ def grafico_6():
     return show(grafico)
 
 
-print(grafico_4())
+# print(grafico_4())
 # print(grafico_51())
 # print(grafico_52())
 # print(grafico_53())
-print(grafico_6())
+# print(grafico_6())
 
 
