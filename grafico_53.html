@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="e43814c7-264f-40c4-ab23-cdc248640735" data-root-id="p1020" style="display: contents;"></div>
+  
+    <script type="application/json" id="p1138">
+      {"0d558b7f-5ffb-436e-88ab-f6bab24e6298":{"version":"3.1.1","title":"Bokeh Application","defs":[],"roots":[{"type":"object","name":"Figure","id":"p1020","attributes":{"width":1300,"height":550,"x_range":{"type":"object","name":"FactorRange","id":"p1029","attributes":{"factors":["Albania","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Lithuania","Luxembourg","Malta","Montenegro","Netherlands","Norway","Poland","Portugal","Republic of Moldova","Romania","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","The former Yugoslav republic of Macedonia","Ukraine","United Kingdom of Great Britain and Northern Ireland"]}},"y_range":{"type":"object","name":"Range1d","id":"p1031","attributes":{"end":20}},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1033"},"y_scale":{"type":"object","name":"LinearScale","id":"p1035"},"title":{"type":"object","name":"Title","id":"p1028","attributes":{"text":"Alcoolismo na Europa (2007)","text_color":"rgb(144, 90, 1)","text_font":"Times New Roman","text_font_size":"25px","align":"center"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1062","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1010","attributes":{"selected":{"type":"object","name":"Selection","id":"p1011","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1012"},"data":{"type":"map","entries":[["index",{"type":"ndarray","array":{"type":"bytes","data":"GAAAAGgAAACIAAAAmAAAAOgAAAD4AAAASAEAAIgBAACJAgAAqQIAALkCAADpAgAAagMAAJoDAACqAwAA2gMAAOoDAAAKBAAAigQAAJoEAADqBAAACgUAAKoFAAD6BQAACgYAAGoGAADMBgAALQcAAH4HAAD/BwAADwgAAD8IAABPCAAA4QgAACEJAAAxCQAAgQkAANEJAADhCQAAIQoAALIKAADSCgAA"},"shape":[42],"dtype":"int32","order":"little"}],["Country",{"type":"ndarray","array":["Albania","Armenia","Austria","Azerbaijan","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czechia","Denmark","Estonia","Finland","France","Georgia","Germany","Greece","Hungary","Iceland","Ireland","Italy","Latvia","Lithuania","Luxembourg","Malta","Montenegro","Netherlands","Norway","Poland","Portugal","Republic of Moldova","Romania","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","The former Yugoslav republic of Macedonia","Ukraine","United Kingdom of Great Britain and Northern Ireland"],"shape":[42],"dtype":"object","order":"little"}],["Alcohol",{"type":"ndarray","array":{"type":"bytes","data":"UrgehetRFkDsUbgehesPQAAAAAAAAClAUrgehetR8D9xPQrXo3AsQAAAAAAAgCRApHA9CtejFEBI4XoUrsclQB+F61G4HilAH4XrUbgeJ0Bcj8L1KNwqQHsUrkfh+iVAH4XrUbjeMUBmZmZmZuYkQGZmZmZmZihAzczMzMxMIUAAAAAAAAAnQNejcD0KVyNAmpmZmZkZKUAfhetRuB4eQK5H4XoULitAPQrXo3C9IEA9CtejcD0oQM3MzMzMzCpAAAAAAACAJ0DNzMzMzMwdQOxRuB6F6xNAj8L1KFwPI0BmZmZmZmYaQM3MzMzMzCVApHA9CtcjKUBSuB6F61EjQDMzMzMzMyVAmpmZmZmZIkApXI/C9SglQArXo3A9CiZAmpmZmZkZJkCamZmZmZkbQOF6FK5H4SRAAAAAAAAA/D+4HoXrUbghQK5H4XoUridA"},"shape":[42],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1063","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1064"}}},"glyph":{"type":"object","name":"VBar","id":"p1059","attributes":{"x":{"type":"field","field":"Country","transform":{"type":"object","name":"Dodge","id":"p1055","attributes":{"value":-0.18,"range":{"id":"p1029"}}}},"width":{"type":"value","value":0.7},"top":{"type":"field","field":"Alcohol"},"line_color":{"type":"value","value":"#DECE0B"},"fill_color":{"type":"value","value":"#DECE0B"},"hatch_color":{"type":"value","value":"#DECE0B"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1060","attributes":{"x":{"type":"field","field":"Country","transform":{"id":"p1055"}},"width":{"type":"value","value":0.7},"top":{"type":"field","field":"Alcohol"},"line_color":{"type":"value","value":"#DECE0B"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"#DECE0B"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"#DECE0B"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1061","attributes":{"x":{"type":"field","field":"Country","transform":{"id":"p1055"}},"width":{"type":"value","value":0.7},"top":{"type":"field","field":"Alcohol"},"line_color":{"type":"value","value":"#DECE0B"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"#DECE0B"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"#DECE0B"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1026","attributes":{"logo":null,"tools":[{"type":"object","name":"HoverTool","id":"p1016","attributes":{"renderers":"auto","tooltips":[["Pa\u00eds","@Country"],["Consumo","@Alcohol"]]}},{"type":"object","name":"PanTool","id":"p1017"},{"type":"object","name":"WheelZoomTool","id":"p1018"},{"type":"object","name":"ResetTool","id":"p1019"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1043","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1046","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1045"},"axis_label":"Consumo de \u00e1lcool puro per capta (em litros)","axis_label_text_color":"rgb(144, 90, 1)","axis_label_text_font":"Times New Roman","axis_label_text_font_size":"15px","major_label_orientation":"vertical","major_label_policy":{"type":"object","name":"AllLabels","id":"p1044"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1037","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1040"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1039"},"axis_label":"Pa\u00edses","axis_label_text_color":"rgb(144, 90, 1)","axis_label_text_font":"Times New Roman","axis_label_text_font_size":"15px","major_label_orientation":45,"major_label_policy":{"type":"object","name":"AllLabels","id":"p1038"}}}],"center":[{"type":"object","name":"Grid","id":"p1042","attributes":{"axis":{"id":"p1037"}}},{"type":"object","name":"Grid","id":"p1049","attributes":{"dimension":1,"axis":{"id":"p1043"}}}],"background_fill_color":"rgba(238, 225, 69, 0.3)"}}],"callbacks":{"type":"map"}}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('p1138').textContent;
+              const render_items = [{"docid":"0d558b7f-5ffb-436e-88ab-f6bab24e6298","roots":{"p1020":"e43814c7-264f-40c4-ab23-cdc248640735"},"root_ids":["p1020"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
