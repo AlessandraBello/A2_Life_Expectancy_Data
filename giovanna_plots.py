@@ -66,13 +66,13 @@ def grafico_51():
     grafico.xaxis.axis_label = "Linha do tempo"
     grafico.xaxis.axis_label_text_font = "Times New Roman"
     grafico.xaxis.axis_label_text_font_size = "15px"
-    grafico.xaxis.minor_tick_line_color = (144, 90, 1)
+    grafico.xaxis.minor_text_color = (144, 90, 1)
 
     grafico.yaxis.axis_label = "Consumo de álcool puro per capta (em litros)"
     grafico.yaxis.axis_label_text_font = "Times New Roman"
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
-    grafico.yaxis.minor_tick_line_color = (144, 90, 1)
+    grafico.yaxis.minor_text_color = (144, 90, 1)
 
     return(show(grafico))
 
@@ -107,13 +107,13 @@ def grafico_52():
     grafico.xaxis.axis_label = "Linha do tempo"
     grafico.xaxis.axis_label_text_font = "Times New Roman"
     grafico.xaxis.axis_label_text_font_size = "15px"
-    grafico.xaxis.minor_tick_line_color = (144, 90, 1)
+    grafico.xaxis.minor_text_color = (144, 90, 1)
 
     grafico.yaxis.axis_label = "Consumo médio de álcool puro per capta (em litros)"
     grafico.yaxis.axis_label_text_font = "Times New Roman"
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
-    grafico.yaxis.minor_tick_line_color = (144, 90, 1)
+    grafico.yaxis.minor_text_color = (144, 90, 1)
 
     grafico.legend.location = "bottom_left"
     grafico.legend.label_text_font_size = "13px"
@@ -145,22 +145,54 @@ def grafico_53():
     grafico.xaxis.axis_label_text_font = "Times New Roman"
     grafico.xaxis.axis_label_text_font_size = "15px"
     grafico.xaxis.major_label_orientation = "vertical"
-    grafico.xaxis.minor_tick_line_color = (144, 90, 1)
+    grafico.xaxis.minor_text_color = (144, 90, 1)
 
     grafico.yaxis.axis_label = "Consumo de álcool puro per capta (em litros)"
     grafico.yaxis.axis_label_text_font = "Times New Roman"
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
-    grafico.yaxis.minor_tick_line_color = (144, 90, 1)
+    grafico.yaxis.minor_text_color = (144, 90, 1)
 
 
     return(show(grafico))
 
+
+def grafico_6():
+    output_file("grafico_6.html")
+    
+    grafico = figure(tools=[HoverTool(tooltips=[("País", "@Country")]), PanTool(), WheelZoomTool(), ResetTool()])
+
+    grafico.circle(x="Adult Mortality", y="Income composition of resources", source=la.dados_grafico6, color=(12, 18, 96, 0.3), size = 7)
+
+    grafico.toolbar.logo = None
+    grafico.background_fill_color = (195, 198, 234, 0.3)
+    grafico.width = 640
+    grafico.height = 480
+
+    grafico.title.text = "Taxa de Mortalidade e IDH no Mundo (2015)"
+    grafico.title.text_font = "Times New Roman"
+    grafico.title.text_font_size = "25px"
+    grafico.title.align = "center"
+    grafico.title.text_color = "#26294C"
+
+    grafico.xaxis.axis_label = "Taxa de Mortalidade"
+    grafico.xaxis.axis_label_text_font = "Times New Roman"
+    grafico.xaxis.axis_label_text_font_size = "15px"
+    grafico.xaxis.minor_text_color = "#26294C"
+
+    grafico.yaxis.axis_label = "Índice de Desenvolvimento Humano (por país)"
+    grafico.yaxis.axis_label_text_font = "Times New Roman"
+    grafico.yaxis.axis_label_text_font_size = "15px"
+    grafico.yaxis.major_label_orientation = "vertical"
+    grafico.yaxis.minor_text_color = "#26294C"
+
+    return show(grafico)
 
 
 # print(grafico_4())
 # print(grafico_51())
 # print(grafico_52())
 # print(grafico_53())
+# print(grafico_6())
 
 

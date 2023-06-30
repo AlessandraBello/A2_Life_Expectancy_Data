@@ -29,7 +29,7 @@ anos_alcool_europa = df[(df["Continent"] == "Europe") & (df["Year"] == 2007)][["
 dados_grafico53 = ColumnDataSource(data = anos_alcool_europa)
 
 #seleciona as colunas de taxa de mortalidade e idh de 2015
-mortalidade_idh = df["Adult Mortality","Income composition of resources", "Country"][df["Year"] == 2015]
+mortalidade_idh = df[["Adult Mortality","Income composition of resources", "Country"]][df["Year"] == 2015]
 
 #transforma os dados de taxa de mortalidade e idh em um objeto ColumnDataSource
 dados_grafico6 = ColumnDataSource(data = mortalidade_idh)
