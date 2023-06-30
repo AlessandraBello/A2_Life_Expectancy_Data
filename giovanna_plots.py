@@ -1,8 +1,9 @@
 import leitura_arquivo as la
 from bokeh.plotting import figure
 from bokeh.io import output_file, show
-from bokeh.models import HoverTool, PanTool, WheelZoomTool, ResetTool
-import pandas as pd
+from bokeh.models import HoverTool, PanTool, WheelZoomTool, ResetTool, Patch, ColumnDataSource
+from bokeh.transform import dodge
+
 
 def grafico_4():
     continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", "Oceania": "#D35400", "South America": "#1E8449"}
@@ -75,6 +76,7 @@ def grafico_51():
 
     return(show(grafico))
 
+
 def grafico_52():
 
     continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", "Oceania": "#D35400", "South America": "#1E8449"}
@@ -82,6 +84,11 @@ def grafico_52():
     output_file("grafico_52.html")
     grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@x"),("Consumo", "@y")] ),  PanTool(), WheelZoomTool(), ResetTool()])
     
+    square_data = ColumnDataSource(data=dict(x=[2006.5, 2006.5, 2007.5, 2007.5], y=[9.5, 10.5, 10.5, 9.5],))
+    square_patch = Patch(x="x", y="y", fill_color= (144, 90, 1, 0.3))
+    grafico.add_glyph(square_data, square_patch)
+
+
     for continent in la.anos_alcool_continente["Continent"].unique():
         df_continent = la.anos_alcool_continente[la.anos_alcool_continente["Continent"] == continent]
         grafico.line(df_continent["Year"], df_continent["Alcohol"], color = continent_colors[continent], legend_label=continent, line_width=3)
@@ -111,10 +118,49 @@ def grafico_52():
     grafico.legend.location = "bottom_left"
     grafico.legend.label_text_font_size = "13px"
     grafico.legend.background_fill_alpha = 0.5
+
     
     return(show(grafico))
 
 
+def grafico_53():
+    output_file("grafico_53.html")
+
+    grafico = figure(x_range = la.anos_alcool_europa["Country"], y_range = (0,20), tools = [HoverTool(tooltips= [ ("País", "@Country"),("Consumo", "@Alcohol")] ),  PanTool(), WheelZoomTool(), ResetTool()])
+    
+    grafico.vbar(x = dodge("Country", -0.18, range=grafico.x_range), top = "Alcohol", source = la.dados_grafico53, width = 0.7, color = "#DECE0B")
+
+    grafico.toolbar.logo = None
+    grafico.background_fill_color = (238, 225, 69, 0.3)
+    grafico.width = 1300
+    grafico.height = 550
+    
+    grafico.title.text = "Alcoolismo na Europa (2007)"
+    grafico.title.text_font = "Times New Roman"
+    grafico.title.text_font_size = "25px"
+    grafico.title.align = "center"
+    grafico.title.text_color = (144, 90, 1)
+
+    grafico.xaxis.axis_label = "Países"
+    grafico.xaxis.axis_label_text_font = "Times New Roman"
+    grafico.xaxis.axis_label_text_font_size = "15px"
+    grafico.xaxis.major_label_orientation = "vertical"
+    grafico.xaxis.minor_tick_line_color = (144, 90, 1)
+
+    grafico.yaxis.axis_label = "Consumo de álcool puro per capta (em litros)"
+    grafico.yaxis.axis_label_text_font = "Times New Roman"
+    grafico.yaxis.axis_label_text_font_size = "15px"
+    grafico.yaxis.major_label_orientation = "vertical"
+    grafico.yaxis.minor_tick_line_color = (144, 90, 1)
+
+
+    return(show(grafico))
+
+
+
 # print(grafico_4())
 # print(grafico_51())
-print(grafico_52())
+# print(grafico_52())
+# print(grafico_53())
+
+
