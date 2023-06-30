@@ -1,4 +1,5 @@
 import criar_plot as cp
+import graficos_789 as gf
 import leitura_arquivo as la
 import layout
 import textos
@@ -19,3 +20,5 @@ graficos_alessandra = layout.agrupar("Alessandra.html", grafico_1, textos.texto_
 grafico_4 = cp.grafico_de_dispercao("under-five deaths ", "Polio", la.dados_grafico4, "red", 0.5, "white", 
                                     "Mortalidade Infantil e Vacinação contra Polio em 2015", "Mortalidade Infantil", 
                                     "Vacinação contra poliomelite (em %)")
+
+grafico_7 = gf.grafico7()
