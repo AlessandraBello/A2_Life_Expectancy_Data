@@ -1,21 +1,17 @@
-import criar_plot as cp
+import manuela_plots as mp
 import leitura_arquivo as la
 import layout
 import textos
 from bokeh.models import FactorRange
 
-grafico_1 = cp.grafico_de_dispercao("Life expectancy ", "Schooling", la.dados_grafico1, "blue", 0.6, "white" , 
-                                    "Expectativa de Vida e Escolaridade, 2015", "Expectativa de Vida (em anos)", 
-                                    "Escolaridade (em anos)")
+# Chama a função do gráfico 7
+grafico_7 = mp.grafico7()
 
-grafico_2 = cp.grafico_de_linha("Year", "Life expectancy ", la.dados_grafico2, "white", 
-                                "Expectativa de vida no Brasil, de 2000 a 2015", "Ano", "Expectativa de Vida")
+# Chama a função do gráfico 8
+grafico_8 = mp.grafico8()
 
-grafico_3 = cp.grafico_de_barras( FactorRange(*la.doenca_ano), "eixo_x", "medias", la.dados_grafico3, "blue", "white", 
-                                 "Média de vacinação nos anos de 2000 e 2015", "Doenças", "Média de vacinação (em %)")
+# Chama a função do gráfico 9
+grafico_9 = mp.grafico9()
 
-graficos_alessandra = layout.agrupar("Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, None, grafico_3, None)
-
-grafico_4 = cp.grafico_de_dispercao("under-five deaths ", "Polio", la.dados_grafico4, "red", 0.5, "white", 
-                                    "Mortalidade Infantil e Vacinação contra Polio em 2015", "Mortalidade Infantil", 
-                                    "Vacinação contra poliomelite (em %)")
+# Cria um html com os gráficos e seus respectivos textos
+graficos_manuela = layout.agrupar("Manuela.html", grafico_7, textos.texto_grafico_7, grafico_8, textos.texto_grafico_8, grafico_9, textos.texto_grafico_9)
