@@ -16,5 +16,9 @@ anos_magreza59_continente = df.groupby(["Year", "Continent"])[" thinness 5-9 yea
 #transforma os dados de anos e magreza extrema de 5-9 anos em um objeto ColumnDataSource
 dados_grafico4 = ColumnDataSource(data=anos_magreza59_continente)
 
+#seleciona as colunas de anos e alcoolismo no brasil
+alcoolismo_brasil = df[["Year","Alcohol"]][df["Country"]=="Brazil"]
 
+#transforma os dados de anos e alcoolismo no brasil  em um objeto ColumnDataSource
+dados_grafico5 = ColumnDataSource(data = alcoolismo_brasil)
 

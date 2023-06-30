@@ -10,8 +10,8 @@ def grafico_linhadotempo1():
     output_file("grafico_4_1.html")
     grafico = figure(tools = [HoverTool(tooltips= [ ("Year", "@x"),(" thinness 5-9 years", "@y")] ),  PanTool(), WheelZoomTool(), ResetTool()])
     
-    for continent in la.dados_grafico4.data["Continent"].unique():
-        df_continent = la.dados_grafico4[la.dados_grafico4["Continent"] == continent]
+    for continent in la.anos_magreza59_continente["Continent"].unique():
+        df_continent = la.anos_magreza59_continente[la.anos_magreza59_continente["Continent"] == continent]
         grafico.line(df_continent["Year"], df_continent[" thinness 5-9 years"], color = continent_colors[continent], legend_label=continent, line_width=3)
 
     grafico.toolbar.logo = None
@@ -30,19 +30,19 @@ def grafico_linhadotempo1():
     grafico.xaxis.axis_label_text_font_size = "15px"
     grafico.xaxis.minor_tick_line_color = (135, 54, 0)
 
-    grafico.yaxis.axis_label = "Prevalência da Magreza Extrema (em %)"
+    grafico.yaxis.axis_label = "Prevalência da Magreza Extrema (em % da população)"
     grafico.yaxis.axis_label_text_font = "Times New Roman"
     grafico.yaxis.axis_label_text_font_size = "15px"
     grafico.yaxis.major_label_orientation = "vertical"
     grafico.yaxis.minor_tick_line_color = (135, 54, 0)
 
-    grafico.legend.location = "bottom_left"
-    
+    grafico.legend.location = "center_left"
+    grafico.legend.label_text_font_size = "13px"
+    grafico.legend.background_fill_alpha = 0.5
     
     return(show(grafico))
 
 print(grafico_linhadotempo1())
-
 
 
 
