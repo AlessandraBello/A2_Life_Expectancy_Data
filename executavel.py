@@ -1,4 +1,4 @@
-import criar_plot as cp
+import criar_plot_alessandra as cp
 import leitura_arquivo as la
 import layout
 import textos
