@@ -9,7 +9,7 @@ def grafico_de_dispercao (range_x, range_y, dados_x, dados_y, banco_de_dados, co
     grafico.width = 640
     grafico.height = 480
     grafico.background_fill_color = cor_fundo
-    grafico.background_fill_alpha = 0.7
+    grafico.background_fill_alpha = 0.2
     grafico.title.text = titulo_grafico
     grafico.title.text_font = "Arial"
     grafico.title.text_font_size = "20px"
@@ -32,7 +32,7 @@ def grafico_de_linha(range_x, range_y, eixo_x, eixo_y, dados, cor_linha, cor_fun
     grafico.width = 640
     grafico.height = 480
     grafico.background_fill_color = cor_fundo
-    grafico.background_fill_alpha = 0.7
+    grafico.background_fill_alpha = 0.3
     grafico.title.text = título_gráfico
     grafico.title.text_font = "Arial"
     grafico.title.text_font_size = "20px"
@@ -58,6 +58,7 @@ def grafico_de_barras(range_x, range_y, dados_x,  dados_y1, dados_y2, dados,cor_
     grafico.width = 640
     grafico.height = 480
     grafico.background_fill_color = cor_fundo
+    grafico.background_fill_alpha = 0.3
     grafico.title.text = titulo_grafico
     grafico.legend.label_text_font = "Arial"
     grafico.legend.border_line_width = 0
