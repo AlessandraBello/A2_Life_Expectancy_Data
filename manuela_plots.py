@@ -24,12 +24,12 @@ def grafico7():
     grafico7.toolbar.logo = None
     grafico7.toolbar.autohide = True
     # Dimensões
-    grafico7.width = 640
-    grafico7.height = 480
+    grafico7.width = 740
+    grafico7.height = 580
     # Título e rótulos de linha
     grafico7.title.text = "Média de Expectativa de Vida por Ano para Cada Continente"
     grafico7.title.text_font = "Arial Black"
-    grafico7.title.text_font_size = "18px"
+    grafico7.title.text_font_size = "16px"
     grafico7.title.align = "center"
     grafico7.xaxis.axis_label = "Ano"
     grafico7.xaxis.axis_label_text_font = "Verdana"
@@ -54,7 +54,7 @@ def grafico7():
     # Legenda
     grafico7.legend.location = "bottom_left"
 
-    return show(grafico7)
+    return grafico7
 
 
 def grafico8():
@@ -101,8 +101,8 @@ def grafico8():
     heatmap.yaxis.axis_label_text_font_size = "15px"
     heatmap.xaxis.major_label_text_font_size = "10px"
     # Dimensões 
-    heatmap.width = 640
-    heatmap.height = 480
+    heatmap.width = 740
+    heatmap.height = 580
 
     return heatmap
 
@@ -149,8 +149,8 @@ def grafico9():
     grafico9.toolbar.logo = None
     grafico9.toolbar.autohide = True
     # Dimensões
-    grafico9.width = 640
-    grafico9.height = 480
+    grafico9.width = 740
+    grafico9.height = 580
     # Título e rótulos de linha
     grafico9.title.text = "Escolaridade e Distribuição de Renda - Clique na legenda para filtrar"
     grafico9.title.text_font = "Arial Black"

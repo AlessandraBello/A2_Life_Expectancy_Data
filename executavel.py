@@ -1,5 +1,5 @@
 import criar_plot as cp
-import graficos_789 as gf
+import manuela_plots as mp
 import leitura_arquivo as la
 import layout
 import textos
@@ -21,6 +21,10 @@ grafico_4 = cp.grafico_de_dispercao("under-five deaths ", "Polio", la.dados_graf
                                     "Mortalidade Infantil e Vacinação contra Polio em 2015", "Mortalidade Infantil", 
                                     "Vacinação contra poliomelite (em %)")
 
-grafico_7 = gf.grafico7()
+grafico_7 = mp.grafico7()
 
-grafico_8 = gf.grafico8()
+grafico_8 = mp.grafico8()
+
+grafico_9 = mp.grafico9()
+
+graficos_manuela = layout.agrupar("Manuela.html", grafico_7, None, grafico_8, None, grafico_9, None)
