@@ -42,23 +42,11 @@ doencas_e_medias_por_ano = {"doenca": ["Poliomielite", "Hepatite B", "Difteria"]
                             "2000": [media_vacinacao_polio_2000, media_vacinacao_hepatiteb_2000, media_vacinacao_difteria_2000],
                             "2015": [media_vacinacao_polio_2015, media_vacinacao_hepatiteb_2015, media_vacinacao_difteria_2015]}
 
-#tupla com os anos utilizados
-anos = ["2000", "2015"]
-
-#cria uma tupla de listas com as doencas e os anos, por exemplo, [("Poliomielite", "2000"), ("Poliomielite", "2015"), ...]
-doenca_ano=[(doenca, ano) for doenca in doencas_e_medias_por_ano["doenca"] for ano in anos]
-
-#cria uma lista com as medias de vacinaçao dos anos 2000 e 2015
-contagem_medias = sum(zip(doencas_e_medias_por_ano["2000"], doencas_e_medias_por_ano["2015"]), ())
-
 #converte os dados em um objeto ColumnDataSource
-dados_grafico3 = ColumnDataSource(data=dict(eixo_x=doenca_ano, medias=contagem_medias))
+dados_grafico3 = ColumnDataSource(data=doencas_e_medias_por_ano)
 
 #seleciona as colunas de morte antes dos 5 anos e vacinação contra a poliomelite
 morte_infantil_poliomelite = df[["under-five deaths ", "Polio"]][df ["Year"] == 2015]
 
 #transforma os dados de morte antes dos 5 anos e vacinação contra a poliomelite em um objeto ColumnDataSource
 dados_grafico4 = ColumnDataSource(data=morte_infantil_poliomelite)
-
-
-
