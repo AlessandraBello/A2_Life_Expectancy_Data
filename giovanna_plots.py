@@ -4,7 +4,7 @@ from bokeh.io import output_file, show
 from bokeh.models import HoverTool, PanTool, WheelZoomTool, ResetTool
 import pandas as pd
 
-def grafico_linhadotempo1():
+def grafico_4():
     continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", "Oceania": "#D35400", "South America": "#1E8449"}
 
     output_file("grafico_4_1.html")
@@ -42,7 +42,40 @@ def grafico_linhadotempo1():
     
     return(show(grafico))
 
-print(grafico_linhadotempo1())
+
+def grafico_51():
+
+    output_file("grafico_5.html")
+
+    grafico = figure(tools = [HoverTool(tooltips= [ ("Year", "@x"),("Alcohol", "@y")] ),  PanTool(), WheelZoomTool(), ResetTool()])
+        
+    grafico.varea(x = "Year", y1 = "Alcohol", y2 = 0, fill_color = "#DECE0B" , source = la.dados_grafico5 )
+
+    grafico.toolbar.logo = None
+    grafico.background_fill_color = (238, 225, 69,0.3)
+    grafico.width = 640
+    grafico.height = 480
+    
+    grafico.title.text = "Alcoolismo no Brasil (2000 - 2014)"
+    grafico.title.text_font = "Times New Roman"
+    grafico.title.text_font_size = "25px"
+    grafico.title.align = "center"
+    grafico.title.text_color = (144, 90, 1)
+
+    grafico.xaxis.axis_label = "Linha do tempo"
+    grafico.xaxis.axis_label_text_font = "Times New Roman"
+    grafico.xaxis.axis_label_text_font_size = "15px"
+    grafico.xaxis.minor_tick_line_color = (144, 90, 1)
+
+    grafico.yaxis.axis_label = "Consumo de álcool puro per capta (em litros)"
+    grafico.yaxis.axis_label_text_font = "Times New Roman"
+    grafico.yaxis.axis_label_text_font_size = "15px"
+    grafico.yaxis.major_label_orientation = "vertical"
+    grafico.yaxis.minor_tick_line_color = (144, 90, 1)
+
+    return(show(grafico))
 
 
+# print(grafico_4())
+print(grafico_51())
 
