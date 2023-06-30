@@ -3,7 +3,7 @@ from bokeh.transform import dodge
 
 def grafico_de_dispercao (range_x, range_y, dados_x, dados_y, banco_de_dados, cor_glifo, transparencia_glifo, cor_fundo, 
                           titulo_grafico, titulo_eixo_x, titulo_eixo_y):
-    grafico = figure(x_range = range_x, y_range = range_y,tools = "box_zoom, zoom_in, pan, reset, save, wheel_zoom")
+    grafico = figure(x_range = range_x, y_range = range_y,tools = "box_zoom, zoom_in, pan, reset, save")
     grafico.toolbar.logo = None
     grafico.circle(x=dados_x, y=dados_y, source = banco_de_dados, color = cor_glifo, alpha = transparencia_glifo)
     grafico.width = 640
@@ -26,7 +26,7 @@ def grafico_de_dispercao (range_x, range_y, dados_x, dados_y, banco_de_dados, co
 
 def grafico_de_linha(range_x, range_y, eixo_x, eixo_y, dados, cor_linha, cor_fundo, título_gráfico, titulo_eixo_x, 
                      titulo_eixo_y):
-    grafico = figure(x_range = range_x, y_range = range_y, tools = "box_zoom, zoom_in, pan, reset, save, wheel_zoom")
+    grafico = figure(x_range = range_x, y_range = range_y, tools = "box_zoom, zoom_in, pan, reset, save")
     grafico.toolbar.logo = None
     grafico.line(x = eixo_x, y = eixo_y, source = dados, color = cor_linha, line_width = 2.5)
     grafico.width = 640
@@ -49,7 +49,7 @@ def grafico_de_linha(range_x, range_y, eixo_x, eixo_y, dados, cor_linha, cor_fun
 
 def grafico_de_barras(range_x, range_y, dados_x,  dados_y1, dados_y2, dados,cor_barras_1, cor_barras_2, transparencia, 
                       cor_fundo, titulo_grafico, titulo_eixo_x, titulo_eixo_y):
-    grafico = figure(x_range = range_x, y_range = range_y, tools = "box_zoom, zoom_in, pan, reset, save, wheel_zoom")
+    grafico = figure(x_range = range_x, y_range = range_y, tools = "box_zoom, zoom_in, pan, reset, save")
     grafico.toolbar.logo = None
     grafico.vbar(x = dodge(dados_x, -0.18, range=grafico.x_range), top = dados_y1, source = dados, width = 0.3, 
                  color=cor_barras_1, alpha = transparencia, legend_label=dados_y1)
