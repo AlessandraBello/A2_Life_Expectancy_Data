@@ -60,5 +60,10 @@ morte_infantil_poliomelite = df[["under-five deaths ", "Polio"]][df ["Year"] == 
 #transforma os dados de morte antes dos 5 anos e vacinação contra a poliomelite em um objeto ColumnDataSource
 dados_grafico4 = ColumnDataSource(data=morte_infantil_poliomelite)
 
+#faz uma média da expectativa de vida por ano de cada continente
+media_expectativa_por_continente = df.groupby(['Year', 'Continent'])['Life expectancy '].mean().reset_index()
+
+#transforma os dados de expectativa de vida média por continente e ano em um objeto COlumnDataSource
+dados_grafico7 = ColumnDataSource(media_expectativa_por_continente)
 
 
