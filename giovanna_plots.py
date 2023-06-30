@@ -1,4 +1,4 @@
-import leitura_arquivo as la
+import leitura_arquivo_giovanna as la
 from bokeh.plotting import figure
 from bokeh.io import output_file, show
 from bokeh.models import HoverTool, PanTool, WheelZoomTool, ResetTool, Patch, ColumnDataSource
@@ -201,7 +201,7 @@ def grafico_6():
     return show(grafico)
 
 
-# print(grafico_4())
+print(grafico_4())
 # print(grafico_51())
 # print(grafico_52())
 # print(grafico_53())
