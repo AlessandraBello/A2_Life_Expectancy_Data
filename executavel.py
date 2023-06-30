@@ -4,14 +4,14 @@ import layout
 import textos
 from bokeh.models import FactorRange
 
-grafico_1 = cp.grafico_de_dispercao("Life expectancy ", "Schooling", la.dados_grafico1, "blue", 0.6, "white" , 
+grafico_1 = cp.grafico_de_dispercao("Life expectancy ", "Schooling", la.dados_grafico1, "#27641D", 0.8, "#EBF8E9" , 
                                     "Expectativa de Vida e Escolaridade, 2015", "Expectativa de Vida (em anos)", 
                                     "Escolaridade (em anos)")
 
-grafico_2 = cp.grafico_de_linha("Year", "Life expectancy ", la.dados_grafico2, "white", 
+grafico_2 = cp.grafico_de_linha("Year", "Life expectancy ", la.dados_grafico2, "#27641D", "#EBF8E9", 
                                 "Expectativa de vida no Brasil, de 2000 a 2015", "Ano", "Expectativa de Vida")
 
-grafico_3 = cp.grafico_de_barras( FactorRange(*la.doenca_ano), "eixo_x", "medias", la.dados_grafico3, "blue", "white", 
+grafico_3 = cp.grafico_de_barras( FactorRange(*la.doenca_ano), "eixo_x", "medias", la.dados_grafico3, "#27641D", "#EBF8E9", 
                                  "Média de vacinação nos anos de 2000 e 2015", "Doenças", "Média de vacinação (em %)")
 
 graficos_alessandra = layout.agrupar("Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, None, grafico_3, None)
