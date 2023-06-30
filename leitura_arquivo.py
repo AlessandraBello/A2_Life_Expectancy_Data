@@ -23,9 +23,15 @@ alcoolismo_brasil = df[["Year","Alcohol"]][df["Country"]=="Brazil"][df["Year"] !
 dados_grafico5 = ColumnDataSource(data = alcoolismo_brasil)
 
 #seleciona as colunas de anos e alcool e tira a media de acordo com o continente
-anos_alcool_continente = df.groupby(["Year", "Continent"])["Alcohol"].mean().reset_index()
+anos_alcool_continente = df[df["Year"] != 2015].groupby(["Year", "Continent"])["Alcohol"].mean().reset_index()
 
 #transforma os dados de anos e alcoolismo por continente  em um objeto ColumnDataSource
 dados_grafico52 = ColumnDataSource(data = anos_alcool_continente)
+
+#seleciona as colunas de anos e alcool do continente europeu
+anos_alcool_europa = df[["Year","Alcohol"]][df["Continent"]=="Europe"]
+
+#transforma os dados de anos e alcoolismo europeu em um objeto ColumnDataSource
+dados_grafico53 = ColumnDataSource(data = anos_alcool_europa)
 
 
