@@ -14,4 +14,4 @@ grafico_8 = mp.grafico8()
 grafico_9 = mp.grafico9()
 
 # Cria um html com os gráficos e seus respectivos textos
-graficos_manuela = layout.agrupar("Manuela.html", grafico_7, textos.texto_grafico_7, grafico_8, None, grafico_9, None)
+graficos_manuela = layout.agrupar("Manuela.html", grafico_7, textos.texto_grafico_7, grafico_8, textos.texto_grafico_8, grafico_9, None)
