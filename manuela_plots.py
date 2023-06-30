@@ -1,6 +1,6 @@
 import pandas as pd
 from bokeh.plotting import figure, output_file, show
-from bokeh.models import ColumnDataSource, HoverTool, PanTool, WheelZoomTool, ResetTool, LinearColorMapper, ColorBar, CDSView, GroupFilter
+from bokeh.models import ColumnDataSource, HoverTool, PanTool, WheelZoomTool, BoxZoomTool, ResetTool, LinearColorMapper, ColorBar, CDSView, GroupFilter
 from bokeh.palettes import Magma256
 import leitura_arquivo as la
 
@@ -11,7 +11,7 @@ def grafico7():
     continent_colors = {"Africa": "#E74C3C", "Asia": "#F39C12", "Europe": "#3498DB", "North America": "#DD1491", "Oceania": "#8E44AD", "South America": "#1ABC9C"}
 
     # Cria o gráfico e configura as ferramentas usadas
-    grafico7 = figure(tools = [HoverTool(tooltips=[("Ano", "@x"), ("Expectativa de Vida", "@y")]), PanTool(), WheelZoomTool(), ResetTool(), ])
+    grafico7 = figure(tools = [HoverTool(tooltips=[("Ano", "@x"), ("Expectativa de Vida", "@y")]), PanTool(), WheelZoomTool(), BoxZoomTool(), ResetTool(), ])
 
     # Plota as linhas para cada continente
     for continent in la.media_expectativa_por_continente["Continent"].unique():
@@ -53,6 +53,7 @@ def grafico7():
     grafico7.xgrid.minor_grid_line_alpha = 0.6
     # Legenda
     grafico7.legend.location = "bottom_left"
+    grafico7.legend.background_fill_alpha = 0.8
 
     return grafico7
 
