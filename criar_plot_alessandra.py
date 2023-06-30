@@ -1,19 +1,33 @@
 from bokeh.plotting import figure
+from bokeh.models import HoverTool
 from bokeh.transform import dodge
 
-def grafico_de_dispercao (range_x, range_y, dados_x, dados_y, banco_de_dados, cor_glifo, transparencia_glifo, cor_fundo, 
+def grafico_de_dispercao (range_x, range_y, dados_x, dados_y, dados1, dados2, dados3, dados4, dados5, dados6, cor1, cor2, cor3, cor4,cor5, cor6, transparencia_glifo, cor_fundo, 
                           titulo_grafico, titulo_eixo_x, titulo_eixo_y):
     grafico = figure(x_range = range_x, y_range = range_y,tools = "box_zoom, zoom_in, pan, reset, save")
     grafico.toolbar.logo = None
-    grafico.circle(x=dados_x, y=dados_y, source = banco_de_dados, color = cor_glifo, alpha = transparencia_glifo)
+    grafico.circle(x=dados_x, y=dados_y, source = dados1, color = cor1, alpha = transparencia_glifo, size = 7, legend_label="Africa")
+    grafico.circle(x=dados_x, y=dados_y, source = dados2, color = cor2, alpha = transparencia_glifo, size = 7,legend_label="América do Sul")
+    grafico.circle(x=dados_x, y=dados_y, source = dados3, color = cor3, alpha = transparencia_glifo,size = 7, legend_label="América do Norte")
+    grafico.circle(x=dados_x, y=dados_y, source = dados4, color = cor4, alpha = transparencia_glifo,size = 7, legend_label="Asia")
+    grafico.circle(x=dados_x, y=dados_y, source = dados5, color = cor5, alpha = transparencia_glifo,size = 7, legend_label="Europa")
+    grafico.circle(x=dados_x, y=dados_y, source = dados6, color = cor6, alpha = transparencia_glifo,size = 7, legend_label="Oceania")
     grafico.width = 640
     grafico.height = 480
     grafico.background_fill_color = cor_fundo
     grafico.background_fill_alpha = 0.2
+    grafico.legend.label_text_font = "Arial"
+    grafico.legend.border_line_width = 0
+    grafico.legend.background_fill_alpha = 0.4
+    grafico.legend.location = "bottom_right"
+    grafico.legend.click_policy = "mute"
     grafico.title.text = titulo_grafico
     grafico.title.text_font = "Arial"
     grafico.title.text_font_size = "20px"
     grafico.title.align = "center"
+    hover = HoverTool(tooltips=[("Escolaridade", "@Schooling"),
+                                ("Expectativa de Vida", "@{Life expectancy }")])
+    grafico.add_tools(hover)
     grafico.xaxis.axis_label = titulo_eixo_x
     grafico.xaxis.axis_label_text_font = "Arial"
     grafico.xaxis.axis_label_text_font_size = "15px"

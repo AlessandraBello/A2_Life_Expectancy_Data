@@ -6,10 +6,21 @@ import numpy as np
 df = pd.read_csv("Life Expectancy Data.csv")
 
 #seleciona as colunas de expectativa de vida e escolaridade do ano de 2015
-expectativa_escolaridade = df[["Life expectancy ", "Schooling"]][df["Year"]==2015]
+selecao_ano = df[["Life expectancy ", "Schooling", "Continent"]][df["Year"]==2015]
+africa = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Africa"]
+america_sul = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="South America"]
+america_norte = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="North America"]
+asia = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Asia"]
+europa = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Europe"]
+oceania = selecao_ano[["Life expectancy ", "Schooling"]][selecao_ano["Continent"]=="Oceania"]
 
 #transforma os dados de expectativa de vida e escolaridade em um objeto ColumnDataSource
-dados_grafico1 = ColumnDataSource(data=expectativa_escolaridade)
+dados_grafico1_1 = ColumnDataSource(data=africa)
+dados_grafico1_2 = ColumnDataSource(data=america_sul)
+dados_grafico1_3 = ColumnDataSource(data=america_norte)
+dados_grafico1_4 = ColumnDataSource(data=asia)
+dados_grafico1_5 = ColumnDataSource(data=europa)
+dados_grafico1_6 = ColumnDataSource(data=oceania)
 
 #seleciona somente as linhas do Brasil e as colunas ano e expectativa de vida
 dados_brasil = df[["Year","Life expectancy "]][df["Country"]=="Brazil"]
@@ -44,9 +55,3 @@ doencas_e_medias_por_ano = {"doenca": ["Poliomielite", "Hepatite B", "Difteria"]
 
 #converte os dados em um objeto ColumnDataSource
 dados_grafico3 = ColumnDataSource(data=doencas_e_medias_por_ano)
-
-#seleciona as colunas de morte antes dos 5 anos e vacinação contra a poliomelite
-morte_infantil_poliomelite = df[["under-five deaths ", "Polio"]][df ["Year"] == 2015]
-
-#transforma os dados de morte antes dos 5 anos e vacinação contra a poliomelite em um objeto ColumnDataSource
-dados_grafico4 = ColumnDataSource(data=morte_infantil_poliomelite)
