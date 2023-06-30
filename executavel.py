@@ -14,5 +14,5 @@ grafico_2 = cp.grafico_de_linha((1999,2016), (70,76), "Year", "Life expectancy "
 grafico_3 = cp.grafico_de_barras(FactorRange(*la.doenca_ano), (0,100), "eixo_x", "medias", la.dados_grafico3, "#27641D", 0.8,"#EBF8E9",
                                  "Média de vacinação nos anos de 2000 e 2015", "Doenças", "Média de vacinação (em %)")
 
-graficos_alessandra = layout.agrupar("Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, 
+graficos_alessandra = layout.agrupar("teste_pages/Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, 
                                      textos.texto_grafico_2, grafico_3, textos.texto_grafico_3)
