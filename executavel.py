@@ -15,4 +15,4 @@ grafico_3 = cp.grafico_de_barras(FactorRange(*la.doenca_ano), (0,100), "eixo_x",
                                  "Média de vacinação nos anos de 2000 e 2015", "Doenças", "Média de vacinação (em %)")
 
 graficos_alessandra = layout.agrupar("Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, 
-                                     textos.texto_grafico_2, grafico_3, None)
+                                     textos.texto_grafico_2, grafico_3, textos.texto_grafico_3)
