@@ -10,11 +10,11 @@ expectativa_escolaridade = df[["Life expectancy ", "Schooling"]]
 #transforma os dados de expectativa de vida e escolaridade em um objeto ColumnDataSource
 dados_grafico1 = ColumnDataSource(data=expectativa_escolaridade)
 
-#seleciona as colunas de morte antes dos 5 anos e vacinação contra a poliomelite
-morte_infantil_poliomelite = df[["under-five deaths ", "Polio"]][df ["Year"] == 2015]
+#seleciona as colunas de anos e magreza extrema de 5-9 anos e tira a media de acordo com o continente
+anos_magreza59_continente = df.groupby(["Year", "Continent"])[" thinness 5-9 years"].mean().reset_index()
 
-#transforma os dados de morte antes dos 5 anos e vacinação contra a poliomelite em um objeto ColumnDataSource
-dados_grafico4 = ColumnDataSource(data=morte_infantil_poliomelite)
+#transforma os dados de anos e magreza extrema de 5-9 anos em um objeto ColumnDataSource
+dados_grafico4 = ColumnDataSource(data=anos_magreza59_continente)
 
 
 
