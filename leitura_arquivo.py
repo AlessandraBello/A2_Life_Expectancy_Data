@@ -95,4 +95,14 @@ dados_heatmap = pd.DataFrame(lista_america_sul, columns = paises_america_sul, in
 #cria um ColumnDaraSource ideal para fazer o heatmap
 dados_grafico8 = ColumnDataSource(dados_heatmap.stack().reset_index().rename(columns={0: "valor"}))
 
+#remove as linhas com valores de escolaridade e composição de renda iguais a 0 e valores faltantes de continente
+dados_filtrados = df[(df['Schooling'] != 0) & (df['Income composition of resources'] != 0) & df['Continent'].notna()]
+
+#filtra os dados para o ano de 2015
+dados_filtrados_2015 = df[df['Year'] == 2015]
+
+#cria um COlumnDataSource com os dados filtrados
+dados_grafico9 = ColumnDataSource(dados_filtrados_2015)  
+
+
 
