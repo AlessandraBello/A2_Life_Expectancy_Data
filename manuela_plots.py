@@ -34,7 +34,7 @@ def grafico7():
     grafico7.xaxis.axis_label = "Ano"
     grafico7.xaxis.axis_label_text_font = "Verdana"
     grafico7.xaxis.axis_label_text_font_size = "15px"
-    grafico7.yaxis.axis_label = "Expectativa de Vida"
+    grafico7.yaxis.axis_label = "Expectativa de Vida (em anos)"
     grafico7.yaxis.axis_label_text_font = "Verdana"
     grafico7.yaxis.axis_label_text_font_size = "15px"
     grafico7.yaxis.major_label_orientation = "vertical"
@@ -153,11 +153,11 @@ def grafico9():
     grafico9.width = 740
     grafico9.height = 580
     # Título e rótulos de linha
-    grafico9.title.text = "Escolaridade e Distribuição de Renda - Clique na legenda para filtrar"
+    grafico9.title.text = "Escolaridade e Distribuição de Renda, 2015 - Clique na legenda para filtrar"
     grafico9.title.text_font = "Arial Black"
     grafico9.title.text_font_size = "14px"
     grafico9.title.align = "center"
-    grafico9.xaxis.axis_label = "Escolaridade"
+    grafico9.xaxis.axis_label = "Escolaridade (em anos)"
     grafico9.xaxis.axis_label_text_font = "Verdana"
     grafico9.xaxis.axis_label_text_font_size = "15px"
     grafico9.yaxis.axis_label = "Distribuição de Renda"
