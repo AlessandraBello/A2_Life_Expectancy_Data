@@ -47,6 +47,9 @@ def grafico_de_linha(range_x, range_y, eixo_x, eixo_y, dados, cor_linha, cor_fun
     grafico.height = 480
     grafico.background_fill_color = cor_fundo
     grafico.background_fill_alpha = 0.3
+    hover = HoverTool(tooltips=[("Ano", "@Year"),
+                                ("Expectativa de Vida", "@{Life expectancy }")])
+    grafico.add_tools(hover)
     grafico.title.text = título_gráfico
     grafico.title.text_font = "Arial"
     grafico.title.text_font_size = "20px"
