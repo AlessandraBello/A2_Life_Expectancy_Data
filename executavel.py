@@ -20,5 +20,5 @@ grafico_3 = cp.grafico_de_barras(la.doencas_e_medias_por_ano["doenca"], (0,110),
                                  "Doenças", "Média de vacinação (em %)")
 
 #gera um único html com os 3 gráficos gerados e os 3 textos correspondentes
-graficos_alessandra = layout.agrupar("docs/Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, 
+graficos_alessandra = layout.agrupar("Alessandra.html", grafico_1, textos.texto_grafico_1, grafico_2, 
                                      textos.texto_grafico_2, grafico_3, textos.texto_grafico_3)
