@@ -44,7 +44,7 @@ def grafico_4():
     grafico.legend.label_text_font_size = "13px"
     grafico.legend.background_fill_alpha = 0.5
     
-    return(show(grafico))
+    return grafico
 
 
 def grafico_51():
@@ -198,7 +198,7 @@ def grafico_6():
     grafico.yaxis.axis_label = "Taxa de Desigualdade por País (menor = mais desigual)"
     grafico.yaxis.major_label_orientation = "vertical"
 
-    return show(grafico)
+    return grafico
 
 
 # print(grafico_4())
