@@ -7,15 +7,18 @@ from bokeh.transform import dodge
 
 def grafico_4():
     #cores dos continentes
-    continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", "Oceania": "#D35400", "South America": "#1E8449"}
+    continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", 
+                        "Oceania": "#D35400", "South America": "#1E8449"}
 
     output_file("grafico_4_1.html")
-    grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@x"),("% da população", "@y")] ),  PanTool(), WheelZoomTool(), ResetTool()])
+    grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@x"),("% da população", "@y")] ),  PanTool(), 
+                              WheelZoomTool(), ResetTool()])
     
     #plot das linhas
     for continent in la.anos_magreza59_continente["Continent"].unique():
         df_continent = la.anos_magreza59_continente[la.anos_magreza59_continente["Continent"] == continent]
-        grafico.line(df_continent["Year"], df_continent[" thinness 5-9 years"], color = continent_colors[continent], legend_label=continent, line_width=3)
+        grafico.line(df_continent["Year"], df_continent[" thinness 5-9 years"], color = continent_colors[continent], 
+                     legend_label=continent, line_width=3)
 
     #configurações básicas
     grafico.toolbar.logo = None
@@ -51,7 +54,8 @@ def grafico_51():
 
     output_file("grafico_5.html")
 
-    grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@Year"),("Consumo", "@Alcohol")] ),  PanTool(), WheelZoomTool(), ResetTool()])
+    grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@Year"),("Consumo", "@Alcohol")] ),  PanTool(), 
+                              WheelZoomTool(), ResetTool()])
         
     #plot da área
     grafico.varea(x = "Year", y1 = "Alcohol", y2 = 0, fill_color = "#DECE0B" , source = la.dados_grafico5 )
@@ -84,10 +88,12 @@ def grafico_51():
 
 def grafico_52():
     #cores dos continentes
-    continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", "Oceania": "#D35400", "South America": "#1E8449"}
+    continent_colors = {"Africa": "#9C640C", "Asia": "#7B241C", "Europe": "#1A5276", "North America": "#5B2C6F", 
+                        "Oceania": "#D35400", "South America": "#1E8449"}
 
     output_file("grafico_52.html")
-    grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@x"),("Consumo", "@y")] ),  PanTool(), WheelZoomTool(), ResetTool()])
+    grafico = figure(tools = [HoverTool(tooltips= [ ("Ano", "@x"),("Consumo", "@y")] ),  PanTool(), WheelZoomTool(), 
+                              ResetTool()])
     
     #criação do glifo
     square_data = ColumnDataSource(data=dict(x=[2006.5, 2006.5, 2007.5, 2007.5], y=[9.5, 10.5, 10.5, 9.5],))
@@ -97,7 +103,8 @@ def grafico_52():
     #plot das linhas
     for continent in la.anos_alcool_continente["Continent"].unique():
         df_continent = la.anos_alcool_continente[la.anos_alcool_continente["Continent"] == continent]
-        grafico.line(df_continent["Year"], df_continent["Alcohol"], color = continent_colors[continent], legend_label=continent, line_width=3)
+        grafico.line(df_continent["Year"], df_continent["Alcohol"], color = continent_colors[continent], 
+                     legend_label=continent, line_width=3)
 
     #configurações básicas
     grafico.toolbar.logo = None
@@ -134,10 +141,13 @@ def grafico_52():
 def grafico_53():
     output_file("grafico_53.html")
 
-    grafico = figure(x_range = la.anos_alcool_europa["Country"], y_range = (0,20), tools = [HoverTool(tooltips= [ ("País", "@Country"),("Consumo", "@Alcohol")] ),  PanTool(), WheelZoomTool(), ResetTool()])
+    grafico = figure(x_range = la.anos_alcool_europa["Country"], y_range = (0,20), 
+                     tools = [HoverTool(tooltips= [ ("País", "@Country"),("Consumo", "@Alcohol")] ),  PanTool(), 
+                              WheelZoomTool(), ResetTool()])
     
     #plot das barras
-    grafico.vbar(x = dodge("Country", -0.18, range=grafico.x_range), top = "Alcohol", source = la.dados_grafico53, width = 0.7, color = "#DECE0B")
+    grafico.vbar(x = dodge("Country", -0.18, range=grafico.x_range), top = "Alcohol", source = la.dados_grafico53, 
+                 width = 0.7, color = "#DECE0B")
 
     #configurações báscicas
     grafico.toolbar.logo = None
@@ -173,7 +183,8 @@ def grafico_6():
     grafico = figure(tools=[HoverTool(tooltips=[("País", "@Country")]), PanTool(), WheelZoomTool(), ResetTool()])
 
     #criação do scatterplot
-    grafico.circle(x="Adult Mortality", y="Income composition of resources", source=la.dados_grafico6, color=(12, 18, 96, 0.3), size = 7)
+    grafico.circle(x="Adult Mortality", y="Income composition of resources", source=la.dados_grafico6, 
+                   color=(12, 18, 96, 0.3), size = 7)
 
     #configurações básicas
     grafico.toolbar.logo = None

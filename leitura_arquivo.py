@@ -52,8 +52,10 @@ media_vacinacao_difteria_2015 = np.mean(list(difteria_2015["Diphtheria "]))
 
 #cria um dicionario com as doenças e as medias de cada ano
 doencas_e_medias_por_ano = {"doenca": ["Poliomielite", "Hepatite B", "Difteria"],
-                            "2000": [media_vacinacao_polio_2000, media_vacinacao_hepatiteb_2000, media_vacinacao_difteria_2000],
-                            "2015": [media_vacinacao_polio_2015, media_vacinacao_hepatiteb_2015, media_vacinacao_difteria_2015]}
+                            "2000": [media_vacinacao_polio_2000, media_vacinacao_hepatiteb_2000, 
+                                     media_vacinacao_difteria_2000],
+                            "2015": [media_vacinacao_polio_2015, media_vacinacao_hepatiteb_2015, 
+                                     media_vacinacao_difteria_2015]}
 
 #converte os dados em um objeto ColumnDataSource
 dados_grafico3 = ColumnDataSource(data=doencas_e_medias_por_ano)
@@ -131,6 +133,3 @@ dados_filtrados_2015 = df[df['Year'] == 2015]
 
 #cria um COlumnDataSource com os dados filtrados
 dados_grafico9 = ColumnDataSource(dados_filtrados_2015)  
-
-
-

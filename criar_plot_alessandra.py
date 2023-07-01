@@ -11,12 +11,18 @@ def grafico_de_dispercao (range_x, range_y, eixo_x, eixo_y, dado_plot_1, dado_pl
     #retira a logo
     grafico.toolbar.logo = None
     #gera os gráficos de circulos
-    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_1, color = cor_plot_1, alpha = transparencia_glifo, size = 7, legend_label="Africa")
-    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_2, color = cor_plot_2, alpha = transparencia_glifo, size = 7,legend_label="América do Sul")
-    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_3, color = cor_plot_3, alpha = transparencia_glifo, size = 7, legend_label="América do Norte")
-    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_4, color = cor_plot_4, alpha = transparencia_glifo, size = 7, legend_label="Asia")
-    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_5, color = cor_plot_5, alpha = transparencia_glifo, size = 7, legend_label="Europa")
-    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_6, color = cor_plot_6, alpha = transparencia_glifo, size = 7, legend_label="Oceania")
+    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_1, color = cor_plot_1, alpha = transparencia_glifo, size = 7, 
+                   legend_label="Africa")
+    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_2, color = cor_plot_2, alpha = transparencia_glifo, size = 7, 
+                   legend_label="América do Sul")
+    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_3, color = cor_plot_3, alpha = transparencia_glifo, size = 7, 
+                   legend_label="América do Norte")
+    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_4, color = cor_plot_4, alpha = transparencia_glifo, size = 7, 
+                   legend_label="Asia")
+    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_5, color = cor_plot_5, alpha = transparencia_glifo, size = 7, 
+                   legend_label="Europa")
+    grafico.circle(x=eixo_x, y=eixo_y, source = dado_plot_6, color = cor_plot_6, alpha = transparencia_glifo, size = 7, 
+                   legend_label="Oceania")
     #ajusta tamanho do gráfico
     grafico.width = 640
     grafico.height = 480

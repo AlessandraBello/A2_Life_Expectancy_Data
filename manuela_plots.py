@@ -7,15 +7,18 @@ import leitura_arquivo as la
 def grafico7():
 
     # Define uma cor para cada continente
-    continent_colors = {"Africa": "#E74C3C", "Asia": "#F39C12", "Europe": "#3498DB", "North America": "#DD1491", "Oceania": "#8E44AD", "South America": "#1ABC9C"}
+    continent_colors = {"Africa": "#E74C3C", "Asia": "#F39C12", "Europe": "#3498DB", "North America": "#DD1491", 
+                        "Oceania": "#8E44AD", "South America": "#1ABC9C"}
 
     # Cria o gráfico e configura as ferramentas usadas
-    grafico7 = figure(tools = [HoverTool(tooltips=[("Ano", "@x"), ("Expectativa de Vida", "@y")]), PanTool(), WheelZoomTool(), BoxZoomTool(), ResetTool(), SaveTool()])
+    grafico7 = figure(tools = [HoverTool(tooltips=[("Ano", "@x"), ("Expectativa de Vida", "@y")]), PanTool(), 
+                               WheelZoomTool(), BoxZoomTool(), ResetTool(), SaveTool()])
 
     # Plota as linhas para cada continente
     for continent in la.media_expectativa_por_continente["Continent"].unique():
         df_continent = la.media_expectativa_por_continente[la.media_expectativa_por_continente["Continent"] == continent]
-        grafico7.line(df_continent["Year"], df_continent["Life expectancy "], color = continent_colors[continent], legend_label = continent, line_width = 2)
+        grafico7.line(df_continent["Year"], df_continent["Life expectancy "], color = continent_colors[continent], 
+                      legend_label = continent, line_width = 2)
 
     # Configurações gerais do gráfico:
 
@@ -73,7 +76,9 @@ def grafico8():
     heatmap = figure(x_range = la.anos_str, y_range = la.paises_america_sul, tools = "box_zoom, wheel_zoom, reset, save")
 
     # Adiciona os retângulos coloridos ao heatmap
-    retangulos = heatmap.rect(x = "level_0", y = "level_1", width = 1, height = 1, fill_color = {"field": "valor", "transform": paleta_heatmap}, line_color = None, source = la.dados_grafico8)
+    retangulos = heatmap.rect(x = "level_0", y = "level_1", width = 1, height = 1, 
+                              fill_color = {"field": "valor", "transform": paleta_heatmap}, line_color = None, 
+                              source = la.dados_grafico8)
 
     # Adiciona a legenda de cores ao lado direito do heatmap
     legenda_cores = ColorBar(color_mapper = paleta_heatmap)
@@ -177,7 +182,4 @@ def grafico9():
     grafico9.xgrid.minor_grid_line_alpha = 0.6
     grafico9.legend.location = "bottom_right"
 
-
     return grafico9
-
-

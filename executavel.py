@@ -36,7 +36,8 @@ grafico5 = gg.grid_giovanna()
 grafico6 = gp.grafico_6()
 
 #criando o html com os gráficos e os textos
-graficos_giovanna = layout.agrupar("Giovanna.html", grafico4, textos.texto_grafico_4, grafico5, textos.texto_grafico_5, grafico6, textos.texto_grafico_6)
+graficos_giovanna = layout.agrupar("Giovanna.html", grafico4, textos.texto_grafico_4, grafico5, textos.texto_grafico_5, 
+                                   grafico6, textos.texto_grafico_6)
 
 # Chama a função do gráfico 7
 grafico_7 = mp.grafico7()
@@ -48,4 +49,5 @@ grafico_8 = mp.grafico8()
 grafico_9 = mp.grafico9()
 
 # Cria um html com os gráficos e seus respectivos textos
-graficos_manuela = layout.agrupar("Manuela.html", grafico_7, textos.texto_grafico_7, grafico_8, textos.texto_grafico_8, grafico_9, textos.texto_grafico_9)
+graficos_manuela = layout.agrupar("Manuela.html", grafico_7, textos.texto_grafico_7, grafico_8, textos.texto_grafico_8, 
+                                  grafico_9, textos.texto_grafico_9)
