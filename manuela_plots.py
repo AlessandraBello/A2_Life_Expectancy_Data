@@ -1,6 +1,5 @@
-import pandas as pd
-from bokeh.plotting import figure, output_file, show
-from bokeh.models import ColumnDataSource, HoverTool, PanTool, WheelZoomTool, BoxZoomTool, ResetTool, SaveTool, LinearColorMapper, ColorBar, CDSView, GroupFilter
+from bokeh.plotting import figure
+from bokeh.models import HoverTool, PanTool, WheelZoomTool, BoxZoomTool, ResetTool, SaveTool, LinearColorMapper, ColorBar, CDSView, GroupFilter
 from bokeh.palettes import Magma256
 import leitura_arquivo as la
 
