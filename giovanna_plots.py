@@ -1,6 +1,6 @@
 import leitura_arquivo as la
 from bokeh.plotting import figure
-from bokeh.io import output_file, show
+from bokeh.io import output_file
 from bokeh.models import HoverTool, PanTool, WheelZoomTool, ResetTool, Patch, ColumnDataSource
 from bokeh.transform import dodge
 

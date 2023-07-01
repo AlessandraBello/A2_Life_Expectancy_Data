@@ -4,6 +4,7 @@ import layout
 import textos
 import giovanna_plots as gp
 import grid_giovanna as gg
+import manuela_plots as mp
 
 #gera o gráfico 1, bastando apenas fornecer os parâmetros necessários
 grafico_1 = cp.grafico_de_dispercao((50,90), (3,22), "Life expectancy ", "Schooling", la.dados_grafico1_1, 
@@ -36,3 +37,15 @@ grafico6 = gp.grafico_6()
 
 #criando o html com os gráficos e os textos
 graficos_giovanna = layout.agrupar("Giovanna.html", grafico4, textos.texto_grafico_4, grafico5, textos.texto_grafico_5, grafico6, textos.texto_grafico_6)
+
+# Chama a função do gráfico 7
+grafico_7 = mp.grafico7()
+
+# Chama a função do gráfico 8
+grafico_8 = mp.grafico8()
+
+# Chama a função do gráfico 9
+grafico_9 = mp.grafico9()
+
+# Cria um html com os gráficos e seus respectivos textos
+graficos_manuela = layout.agrupar("Manuela.html", grafico_7, textos.texto_grafico_7, grafico_8, textos.texto_grafico_8, grafico_9, textos.texto_grafico_9)
